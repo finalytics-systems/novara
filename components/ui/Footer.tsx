@@ -63,14 +63,14 @@ export default function Footer() {
                 <MapPin size={18} className="text-primary-400 mt-1 flex-shrink-0" />
                 <div className="text-sm">
                   <div className="font-semibold text-white mb-1">Saudi Arabia</div>
-                  <div>Address to be added</div>
+                  <div>Office no 101, PVH4+VP3, An Nassim Ash Sharqi, Riyadh</div>
                 </div>
               </li>
               <li className="flex items-start space-x-2">
                 <MapPin size={18} className="text-primary-400 mt-1 flex-shrink-0" />
                 <div className="text-sm">
                   <div className="font-semibold text-white mb-1">Pakistan</div>
-                  <div>Address to be added</div>
+                  <div>Office no 02, Crown Mall, opposite DHA Phase 2, Islamabad</div>
                 </div>
               </li>
               <li className="flex items-center space-x-2 mt-4">
