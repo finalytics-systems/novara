@@ -25,18 +25,19 @@ export default function AppLogo({ name, logo, className = '' }: AppLogoProps) {
             className={`object-contain max-h-12 max-w-24 transition-opacity duration-300 ${
               imageLoaded ? 'opacity-100' : 'opacity-0'
             }`}
+            style={{ filter: 'none' }}
             onLoad={() => setImageLoaded(true)}
             onError={() => setImageError(true)}
           />
           {!imageLoaded && !imageError && (
-            <div className="w-16 h-16 bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg flex items-center justify-center animate-pulse">
-              <span className="text-primary-600 font-bold text-xs">{name}</span>
+            <div className="w-16 h-16 rounded-lg flex items-center justify-center animate-pulse" style={{ backgroundColor: '#f3f4f6' }}>
+              <span className="font-bold text-xs" style={{ color: '#09293B' }}>{name}</span>
             </div>
           )}
         </>
       ) : (
-        <div className="w-full h-full bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg flex items-center justify-center">
-          <span className="text-primary-600 font-semibold text-sm">{name}</span>
+        <div className="w-full h-full rounded-lg flex items-center justify-center" style={{ backgroundColor: '#f3f4f6' }}>
+          <span className="font-semibold text-sm" style={{ color: '#09293B' }}>{name}</span>
         </div>
       )}
     </div>

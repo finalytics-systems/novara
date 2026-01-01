@@ -10,25 +10,25 @@ import AppLogo from '@/components/ui/AppLogo';
 export default function HomePage() {
   const services = [
     {
-      title: 'ERPNext Consulting',
+      title: 'Consulting',
       description: 'Our ERPNext consulting services help businesses design efficient processes, optimise performance, and get maximum value from ERPNext.',
       icon: Users,
       href: '/services/consulting',
     },
     {
-      title: 'ERPNext Implementation',
+      title: 'Implementation',
       description: 'We deliver end-to-end ERPNext implementation services, configuring ERPNext to match your business processes and scale with your growth.',
       icon: Rocket,
       href: '/services/erp-implementation',
     },
     {
-      title: 'ERPNext Customisation & Automation',
+      title: 'Customisation & Automation',
       description: 'We provide ERPNext customisation tailored to customer requirements, optimising workflows, reports, and automation without compromising system stability.',
       icon: Code,
       href: '/services/custom-apps',
     },
     {
-      title: 'ERPNext Training',
+      title: 'Training',
       description: 'We offer practical ERPNext training tailored to user roles, ensuring teams confidently adopt and use ERPNext effectively.',
       icon: Award,
       href: '/services/training',
@@ -65,21 +65,6 @@ export default function HomePage() {
             <p className="text-xl md:text-2xl text-gray-100 mb-10 leading-relaxed">
               Successful ERP implementation starts with clarity business-led, outcome-focused, and technology-enabled. We help organisations design, implement, and optimise ERP platforms that drive efficiency, control, and sustainable growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
-                className="bg-primary-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 transition-colors flex items-center justify-center group text-lg"
-              >
-                Get Started
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center text-lg"
-              >
-                Our Services
-              </Link>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -130,8 +115,8 @@ export default function HomePage() {
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary-100/50 to-transparent rounded-full blur-3xl"></div>
             <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4 bg-gradient-to-r from-gray-900 to-primary-700 bg-clip-text text-transparent">
-                  Digital transformation starts here
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  <span className="bg-primary-100 px-4 py-2 rounded inline-block">Digital transformation starts here</span>
                 </h2>
                 <p className="text-gray-600 mb-6 text-lg leading-relaxed">
                   We are a UK-based ERPNext and digital transformation partner, led by Chartered Accountants with over 20 years of combined experience. Our finance-led approach ensures ERPNext is implemented, customised, and supported to meet real operational and reporting needs.
@@ -273,8 +258,9 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
                 className="bg-white rounded-xl p-6 border border-gray-200 hover:border-primary-400 hover:shadow-xl hover:shadow-primary-100 transition-all flex items-center justify-center min-h-[120px] group"
+                style={{ filter: 'none' }}
               >
-                <div className="w-full">
+                <div className="w-full" style={{ filter: 'none' }}>
                   <AppLogo name={app.name} logo={app.logo} />
                 </div>
               </motion.div>

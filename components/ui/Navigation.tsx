@@ -39,21 +39,15 @@ export default function Navigation() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-sm transition-colors ${
                   isActive(link.href)
-                    ? 'text-primary-500'
-                    : 'text-gray-700 hover:text-primary-500'
+                    ? 'text-primary-500 font-bold'
+                    : 'text-gray-700 hover:text-primary-500 font-medium'
                 }`}
               >
                 {link.name}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className="bg-primary-500 text-white px-6 py-2 rounded-lg hover:bg-primary-600 transition-colors"
-            >
-              Get Started
-            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -75,20 +69,13 @@ export default function Navigation() {
                 onClick={() => setIsOpen(false)}
                 className={`block py-2 px-4 rounded ${
                   isActive(link.href)
-                    ? 'bg-primary-50 text-primary-500'
-                    : 'text-gray-700 hover:bg-gray-50'
+                    ? 'text-primary-500 font-bold'
+                    : 'text-gray-700 hover:bg-gray-50 font-medium'
                 }`}
               >
                 {link.name}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              onClick={() => setIsOpen(false)}
-              className="block mt-2 bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 text-center"
-            >
-              Get Started
-            </Link>
           </div>
         )}
       </div>

@@ -25,6 +25,7 @@ export default function ClientLogo({ name, logo, className = '' }: ClientLogoPro
             className={`object-contain max-h-16 transition-opacity duration-300 ${
               imageLoaded ? 'opacity-100' : 'opacity-0'
             }`}
+            style={{ filter: 'none' }}
             onLoad={() => setImageLoaded(true)}
             onError={() => setImageError(true)}
           />
