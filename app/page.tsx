@@ -255,16 +255,16 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-3 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
             {[
-              { name: 'PayPal', logo: 'paypal.png' },
-              { name: 'Dropbox', logo: 'dropbox.png' },
-              { name: 'Razorpay', logo: 'razorpay.png' },
-              { name: 'Slack', logo: 'slack.png' },
-              { name: 'Google', logo: 'google.png' },
-              { name: 'Stripe', logo: 'stripe.png' },
-              { name: 'Exotel', logo: 'exotel.png' },
-              { name: 'WooCommerce', logo: 'woocommerce.png' },
-              { name: 'Plaid', logo: 'plaid.png' },
-              { name: 'AWS', logo: 'aws.png' },
+              { name: 'PayPal', logo: 'Paypal.png' },
+              { name: 'Dropbox', logo: 'Dropbox.png' },
+              { name: 'Razorpay', logo: 'Razor Pay.webp' },
+              { name: 'Slack', logo: 'Slack.png' },
+              { name: 'Google', logo: 'Google.webp' },
+              { name: 'Stripe', logo: 'Stripe.webp' },
+              { name: 'Exotel', logo: 'Exotel.avif' },
+              { name: 'WooCommerce', logo: 'Woo Commerce.png' },
+              { name: 'Plaid', logo: 'Plaid.png' },
+              { name: 'AWS', logo: 'AWS.png' },
             ].map((app, idx) => (
               <motion.div
                 key={app.name}

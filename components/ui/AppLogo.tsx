@@ -18,7 +18,7 @@ export default function AppLogo({ name, logo, className = '' }: AppLogoProps) {
       {!imageError ? (
         <>
           <Image
-            src={`/images/app-logos/${logo}`}
+            src={`/images/logos/${logo}`}
             alt={name}
             width={120}
             height={60}
