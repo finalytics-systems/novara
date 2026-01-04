@@ -1,30 +1,23 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Rocket, Target, Users, Award } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import Image from 'next/image';
 
 export default function AboutPage() {
-  const values = [
-    {
-      icon: Rocket,
-      title: 'Innovation',
-      description: 'We embrace cutting-edge technologies to deliver modern solutions',
-    },
-    {
-      icon: Target,
-      title: 'Excellence',
-      description: 'Committed to delivering the highest quality in every project',
-    },
-    {
-      icon: Users,
-      title: 'Partnership',
-      description: 'Building long-term relationships with our clients',
-    },
-    {
-      icon: Award,
-      title: 'Expertise',
-      description: 'Deep knowledge and experience in ERPNext and business automation',
-    },
+  const approachPoints = [
+    'A deep understanding of business processes and finance',
+    'Practical, scalable ERPNext solutions',
+    'Clear communication and structured delivery',
+    'Long-term partnerships, not one-off projects',
+  ];
+
+  const whyWorkWithUs = [
+    'UK-based leadership with ACA & ACCA-qualified founders',
+    'Strong finance, compliance, and operational expertise',
+    'Specialist ERPNext technical and functional consultants',
+    'Global delivery model with local accountability',
+    'Practical, business-led digital transformation',
   ];
 
   return (
@@ -35,119 +28,166 @@ export default function AboutPage() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl font-bold mb-6"
+            className="text-5xl md:text-6xl font-bold mb-6"
           >
-            About Novara Tech
+            We transform businesses for a better future
           </motion.h1>
+        </div>
+      </section>
+
+      {/* Who We Are Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold text-gray-900 mb-6"
+          >
+            Who we are
+          </motion.h2>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="prose prose-lg max-w-none"
+          >
+            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+              Founded by Chartered Accountants with over 20 years of combined experience in finance, operations, and systems transformation, we understand the real challenges organisations face. Our finance-led perspective means we design ERP solutions that work in the real world—solutions that integrate seamlessly with your existing processes, deliver the insights you need, and scale as you grow.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Our Firm Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-primary-50/30 to-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-primary-600 font-semibold mb-4">Our firm</h3>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                We are an independent management and technology consultancy with European roots.
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Our global network spans over 70 countries and 13,000 people. We operate in three business units: Consulting, Products, and Implementation, consulting, training, and support. Our mission is to make digital transformation accessible, practical, and sustainable for every organisation we work with.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                ERPNext Specialists with Real Business Experience
+              </h3>
+              <p className="text-gray-600 text-lg leading-relaxed mb-4">
+                Our specialist team of technical and functional ERP consultants brings together deep ERPNext expertise with real-world business knowledge. We don't just configure and customise ERPNext—we ensure it aligns with your business objectives, integrates with your workflows, and delivers measurable value.
+              </p>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                With teams in the UK, Pakistan, and Gulf countries, we combine global delivery capability with local accountability. This means you get access to world-class ERPNext services, delivered by teams who understand your market, your challenges, and your opportunities.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Approach Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold text-gray-900 mb-4"
+          >
+            Our Approach
+          </motion.h2>
+          
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-primary-50"
+            className="text-gray-600 text-lg mb-8"
           >
-            Innovative Technology Solutions for Modern Business
+            We believe successful digital transformation is built on:
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="space-y-4 mb-8"
+          >
+            {approachPoints.map((point, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 + index * 0.1 }}
+                className="flex items-start gap-4"
+              >
+                <CheckCircle className="text-primary-600 mt-1 flex-shrink-0" size={24} />
+                <p className="text-gray-700 text-lg">{point}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.6 }}
+            className="text-gray-600 text-lg leading-relaxed"
+          >
+            We work with you to ensure ERPNext becomes more than just software—it becomes a platform for efficiency, insight, and sustainable growth. Every project we deliver is designed to build long-term capability, not just solve immediate problems.
           </motion.p>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-20 bg-white">
+      {/* Why Work With Us Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-primary-50/30 to-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Who We Are</h2>
-            <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              Novara Tech is a forward-thinking technology company specializing in ERPNext implementation,
-              custom business automation, and comprehensive ERP consulting services. We help businesses
-              streamline their operations, improve efficiency, and achieve their digital transformation goals.
-            </p>
-            <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              Operating in strategic partnership with <span className="text-primary-600 font-semibold">Finalytics</span>,
-              we combine cutting-edge technology expertise with deep industry knowledge to deliver exceptional
-              results for our clients. Together, we bring over 100 years of combined experience and have
-              successfully served 500+ companies worldwide.
-            </p>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Our focus on ERPNext and open-source technologies allows us to provide flexible, scalable,
-              and cost-effective solutions that grow with your business. We don't just implement software –
-              we partner with you to transform your business processes and drive sustainable growth.
-            </p>
-          </div>
-        </div>
-      </section>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold text-gray-900 mb-8 text-center"
+          >
+            Why Work With Us
+          </motion.h2>
 
-      {/* Values Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
-            <p className="text-xl text-gray-600">
-              The principles that guide everything we do
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="space-y-4"
+          >
+            {whyWorkWithUs.map((point, index) => (
               <motion.div
-                key={value.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 shadow-lg text-center"
+                transition={{ delay: 0.2 + index * 0.1 }}
+                className="bg-white rounded-xl p-6 shadow-md border border-gray-100 flex items-start gap-4 hover:shadow-lg transition-shadow"
               >
-                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="text-primary-600" size={32} />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {value.title}
-                </h3>
-                <p className="text-gray-600">
-                  {value.description}
-                </p>
+                <CheckCircle className="text-primary-600 mt-1 flex-shrink-0" size={24} />
+                <p className="text-gray-700 text-lg">{point}</p>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose Novara Tech?</h2>
-          
-          <div className="space-y-6">
-            <div className="border-l-4 border-primary-500 pl-6 py-2">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">ERPNext Specialists</h3>
-              <p className="text-gray-600">
-                We are experts in ERPNext implementation and customization, ensuring you get the most
-                out of this powerful open-source ERP platform.
-              </p>
-            </div>
-
-            <div className="border-l-4 border-primary-500 pl-6 py-2">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Custom Development</h3>
-              <p className="text-gray-600">
-                Our team excels at building custom applications and automations tailored to your
-                unique business requirements.
-              </p>
-            </div>
-
-            <div className="border-l-4 border-primary-500 pl-6 py-2">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Partnership</h3>
-              <p className="text-gray-600">
-                Through our partnership with Finalytics, we offer comprehensive solutions backed by
-                decades of industry experience and a track record of 500+ successful projects.
-              </p>
-            </div>
-
-            <div className="border-l-4 border-primary-500 pl-6 py-2">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">End-to-End Support</h3>
-              <p className="text-gray-600">
-                From initial consultation to implementation, training, and ongoing support,
-                we're with you every step of the way.
-              </p>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

@@ -11,25 +11,25 @@ export default function HomePage() {
   const services = [
     {
       title: 'Consulting',
-      description: 'Our ERPNext consulting services help businesses design efficient processes, optimise performance, and get maximum value from ERPNext.',
+      description: 'Our consulting services help businesses design efficient processes, optimise performance, and get maximum value from their systems.',
       icon: Users,
       href: '/services/consulting',
     },
     {
       title: 'Implementation',
-      description: 'We deliver end-to-end ERPNext implementation services, configuring ERPNext to match your business processes and scale with your growth.',
+      description: 'We deliver end-to-end implementation services, configuring systems to match your business processes and scale with your growth.',
       icon: Rocket,
       href: '/services/erp-implementation',
     },
     {
       title: 'Customisation & Automation',
-      description: 'We provide ERPNext customisation tailored to customer requirements, optimising workflows, reports, and automation without compromising system stability.',
+      description: 'We provide customisation tailored to customer requirements, optimising workflows, reports, and automation without compromising system stability.',
       icon: Code,
       href: '/services/custom-apps',
     },
     {
       title: 'Training',
-      description: 'We offer practical ERPNext training tailored to user roles, ensuring teams confidently adopt and use ERPNext effectively.',
+      description: 'We offer practical training tailored to user roles, ensuring teams confidently adopt and use systems effectively.',
       icon: Award,
       href: '/services/training',
     },
@@ -69,6 +69,23 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* About Us Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-primary-50/30 to-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-12 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary-100/50 to-transparent rounded-full blur-3xl"></div>
+            <div className="relative z-10">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                <span className="bg-primary-100 px-4 py-2 rounded inline-block">Digital transformation starts here</span>
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed max-w-3xl">
+                We are a UK-based ERPNext and digital transformation partner, led by Chartered Accountants with over 20 years of combined experience. Our finance-led approach ensures ERPNext is implemented, customised, and supported to meet real operational and reporting needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -91,8 +108,8 @@ export default function HomePage() {
                 <Link href={service.href}>
                   <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-xl hover:border-primary-300 transition-all h-full group relative overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 to-primary-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg flex items-center justify-center mb-4 group-hover:from-primary-500 group-hover:to-primary-600 transition-all shadow-sm group-hover:shadow-md">
-                      <service.icon className="text-primary-600 group-hover:text-white transition-colors" size={24} />
+                    <div className="w-12 h-12 bg-white border border-gray-200 rounded-lg flex items-center justify-center mb-4 group-hover:border-primary-300 transition-all shadow-sm group-hover:shadow-md group-hover:scale-105">
+                      <service.icon className="" size={24} style={{ stroke: '#0A2A40', fill: 'none', color: '#0A2A40' }} />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
                       {service.title}
@@ -108,30 +125,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* About Us Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-primary-50/30 to-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-12 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary-100/50 to-transparent rounded-full blur-3xl"></div>
-            <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  <span className="bg-primary-100 px-4 py-2 rounded inline-block">Digital transformation starts here</span>
-                </h2>
-                <p className="text-gray-600 mb-6 text-lg leading-relaxed">
-                  We are a UK-based ERPNext and digital transformation partner, led by Chartered Accountants with over 20 years of combined experience. Our finance-led approach ensures ERPNext is implemented, customised, and supported to meet real operational and reporting needs.
-                </p>
-              </div>
-              <div className="flex justify-center">
-                <div className="bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 rounded-xl p-12 text-white text-center shadow-2xl transform hover:scale-105 transition-transform">
-                  <div className="text-5xl font-bold mb-2">20+</div>
-                  <div className="text-xl font-semibold">Years Experience</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Client Portfolio Section */}
       <section className="py-20 bg-gradient-to-b from-white to-gray-50">
@@ -139,10 +132,10 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Organisations That Trust Us
-            </h2>
+                </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We've delivered successful ERP implementation and advisory services to the organisations below, earning long-term trust through quality delivery and measurable results.
-            </p>
+                </p>
           </div>
 
           {/* GCC Implementations */}
@@ -192,11 +185,11 @@ export default function HomePage() {
                   <div className="text-center w-full">
                     <ClientLogo name={company.name} logo={company.logo} />
                     <p className="text-sm font-semibold text-gray-700 group-hover:text-primary-600 transition-colors">{company.name}</p>
-                  </div>
+              </div>
                 </motion.div>
               ))}
-            </div>
-          </div>
+                </div>
+              </div>
 
           {/* Pakistan Implementations */}
           <div className="mb-8">
